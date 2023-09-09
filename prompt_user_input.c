@@ -17,6 +17,8 @@ int main (void)
 	{
 		command = write(STDOUT_FILENO, "$ ", 2);
 		read_bytes = getline(&input, &input_size, stdin);
+
+		execute_command(char* args);
 		if (read_bytes == -1)
 		{
 			if (feof(stdin))

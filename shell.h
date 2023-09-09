@@ -18,6 +18,6 @@ void display_prompt();
 char* read_input();
 
 /* function to process and execute a command based on user input */
-void execute_command(char* command);
 
+void execute_command(char* command);
 #endif
