@@ -1,5 +1,10 @@
 #include "shell.h"
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 int main (void)
 {
@@ -16,6 +21,7 @@ int main (void)
 		{
 			if (feof(stdin))
 			{
+				free(input);
 				exit(0);
 			}
 			else
@@ -29,4 +35,34 @@ int main (void)
 	return (0);
 }
 
+/* Create a child process */
 
+pid_t pid = fork();
+if (pid == -1)
+{
+	perror("fork");
+	exit(1);
+}
+if (pid == 0)
+{
+	char *args[2];
+	args[0] = input;
+	args[1] = NULL;
+
+	if (execve(input, args, NULL) == -1)
+	{perror(input);
+		exit(1);
+	}
+}
+
+/* Parent process */
+else
+{
+	int status;
+	if (wait(&status) == -1)
+	{
+		perror("wait");
+		exit(1);
+	}
+	return (0);
+}
