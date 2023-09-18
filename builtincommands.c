@@ -8,7 +8,7 @@
 */
 void my_shell_exit(int exit_status)
 {
-	exit(exit_status);
+exit(exit_status);
 }
 
 /**
@@ -19,19 +19,19 @@ void my_shell_exit(int exit_status)
 */
 void builtin_matcher(char **tokenized_input)
 {
-	if (custom_strcmp(tokenized_input[0], "exit") == 0)
-	{
-		int exit_status = 0;
+if (custom_strcmp(tokenized_input[0], "exit") == 0)
+{
+int exit_status = 0;
 
-		if (tokenized_input[1] != NULL)
-		{
-			exit_status = custom_atoi(tokenized_input[1]);
-		}
-		my_shell_exit(exit_status);
-	}
-	else if (custom_strcmp(tokenized_input[0], "env") == 0)
-	{
-		return;
-	}
+if (tokenized_input[1] != NULL)
+{
+exit_status = custom_atoi(tokenized_input[1]);
+}
+my_shell_exit(exit_status);
+}
+else if (custom_strcmp(tokenized_input[0], "env") == 0)
+{
+return;
+}
 }
 
