@@ -1,19 +1,18 @@
 #ifndef SHELL_H
 #define SHELL_H
 
+/* Constants and MACROS */
+#define SIZE_B 1024
+#define INITIAL_TOKEN_CAPACITY 64
+#define TOKEN_DELIMITERS " \n"
+
+#include <sys/types.h>
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <sys/types.h>
-
-/* Constants and MACROS */
-#define SIZE_B 1024
-#define INITIAL_TOKEN_CAPACITY 64
-#define TOKEN_DELIMITERS " \n"
-
 /* FUNCTIONS AND DECLARATIONS */
 
 /* Reads user input using getline and handles EOF condition. */

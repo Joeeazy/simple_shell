@@ -26,7 +26,7 @@ res_value = res_value * 10 + (s[h] - '0');
 h++;
 }
 
-return (res_value * sn);
+return (res_value *sn);
 }
 
 /**
@@ -69,11 +69,15 @@ return (0);
 *@string_length: the maimum length of bytes being used innit
 *Return: pointer to the dest of the string
 */
-char *custom_strncpy(char *destination_pointer, char *source_pointer, int string_length)
+char *custom_strncpy(
+	char *destination_pointer,
+	char *source_pointer,
+	int string_length)
 {
 int copy_index;
 
-for (copy_index = 0; copy_index < string_length && source_pointer[copy_index] != '\0'; copy_index++)
+for (copy_index = 0; copy_index < string_length &&
+		source_pointer[copy_index] != '\0'; copy_index++)
 {
 destination_pointer[copy_index] = source_pointer[copy_index];
 }
@@ -96,7 +100,9 @@ int result_value = 0;
 int sn = 1;
 int character_index = 0;
 
-while (strng[character_index] == ' ' || strng[character_index] == '\t' || strng[character_index] == '\n')
+while (strng[character_index] == ' ' ||
+	strng[character_index] == '\t' ||
+	strng[character_index] == '\n')
 {
 character_index++;
 }
@@ -112,5 +118,5 @@ result_value = result_value * 10 + (strng[character_index] - '0');
 character_index++;
 }
 
-return (result_value * sn);
+return (result_value *sn);
 }

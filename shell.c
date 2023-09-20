@@ -8,7 +8,8 @@
 * @arg_values: An array of command-line argument strings.
 * Return: The exit status of the last executed command.
 */
-int main(int arg_count __attribute__((unused)), char **arg_values __attribute__((unused)))
+int main(int arg_count __attribute__((unused)),
+char **arg_values __attribute__((unused)))
 {
 exit_status = 0;
 run_shell_loop(arg_count, arg_values);

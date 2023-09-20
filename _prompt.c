@@ -5,7 +5,7 @@
 /**
 * run_shell_loop - continously runs the shell untill CTRL +D or Exit.
 * @arg_count: The number of command line arguments.
-* @arg_values: An array of command-line arguments strings.
+* @arg_value: An array of command-line arguments strings.
 * Return: void
 */
 void run_shell_loop(int arg_count, char **arg_value)

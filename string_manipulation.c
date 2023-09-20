@@ -93,7 +93,10 @@ return (NULL);
 *
 * Return: A pointer to the destination buffer.
 */
-char *_memcpy(char *destination_pointer, const char *source_pointer, unsigned int n)
+char *_memcpy(
+	char *destination_pointer,
+	const char *source_pointer,
+	unsigned int n)
 {
 unsigned int i;
 
