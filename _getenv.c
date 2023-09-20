@@ -1,5 +1,5 @@
 #include "shell.h"
-#include <stddef.h>i
+#include <stddef.h>
 #include <unistd.h>
 
 size_t _strlen(const char *strng);

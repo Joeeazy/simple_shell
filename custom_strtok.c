@@ -27,7 +27,7 @@ if (*remainder == '\0')
 {
 return (NULL);
 }
-token == remainder;
+token = remainder;
 while (*remainder != '\0' && strchr(delim, *remainder) == NULL)
 {
 remainder++;

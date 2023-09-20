@@ -29,6 +29,6 @@ break;
 tokenized_input = parse_input(input_line);
 shell_condition = execute_arguments(tokenized_input);
 free(input_line);
-frr_tokens(tokenized_input);
+free_tokens(tokenized_input);
 } while (shell_condition);
 }

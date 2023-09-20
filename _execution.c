@@ -29,7 +29,7 @@ return (1);
 
 if (!child_pid)
 {
-if (execve(commmand, tokenized_input, environ) == -1)
+if (execve(command, tokenized_input, environ) == -1)
 {
 perror(command);
 exit(1);
