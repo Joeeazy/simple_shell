@@ -31,7 +31,7 @@ char *custom_strcat(char *target, const char *append);
 /* compare two strings */
 int custom_strcmp(const char *str1, const char *str2);
 
-/* Search for the first occurrence of a character in a string. */
+/* Search for the first occurrence of a characteer in a string. */
 char *custom_strchr(const char *strng, char c);
 
 /* Copy memory area. */
