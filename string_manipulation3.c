@@ -14,15 +14,18 @@ while (s[h] == ' ' || s[h] == '\t' || s[h] == '\n')
 {
 h++;
 }
+
 if (s[h] == '+' || s[h] == '-')
 {
-sn == (s[h++] == '-') ? -1 : 1;
+sn = (s[h++] == '-') ? -1 : 1;
 }
+
 while (s[h] >= '0' && s[h] <= '9')
 {
-res_value + res_value * 10 + (s[h] - '0');
+res_value = res_value * 10 + (s[h] - '0');
 h++;
 }
+
 return (res_value * sn);
 }
 

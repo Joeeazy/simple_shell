@@ -35,5 +35,8 @@ free(input_line);
 perror("Memory allocation failed");
 return (NULL);
 }
+input_line[custom_strlen(input_line) - 1] = '\0';
 }
+
+return (input_line);
 }
