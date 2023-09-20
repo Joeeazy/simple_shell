@@ -62,8 +62,7 @@ size_t n, accept_index;
 
 for (n = 0; strng[n] != '\0'; n++)
 {
-for (accept_index = 0; valid_characters[accept_index] != '\0'; a
-ccept_index++)
+for (accept_index = 0; valid_characters[accept_index] != '\0'; accept_index++)
 {
 if (strng[n] == valid_characters[accept_index])
 {

@@ -69,13 +69,11 @@ return (0);
 *@string_length: the maimum length of bytes being used innit
 *Return: pointer to the dest of the string
 */
-char *custom_strncpy(char *destination_pointer, char *source_pointer, int strin
-g_length)
+char *custom_strncpy(char *destination_pointer, char *source_pointer, int string_length)
 {
 int copy_index;
 
-for (copy_index = 0; copy_index < string_length && source_pointer[copy_i
-ndex] != '\0'; copy_index++)
+for (copy_index = 0; copy_index < string_length && source_pointer[copy_index] != '\0'; copy_index++)
 {
 destination_pointer[copy_index] = source_pointer[copy_index];
 }
@@ -85,6 +83,7 @@ destination_pointer[copy_index] = '\0';
 }
 return (destination_pointer);
 }
+
 /**
 *atoi_alt - convert strings into characters
 *@strng: the string to be converted
