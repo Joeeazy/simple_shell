@@ -20,7 +20,7 @@
 char *custom_read_command(void);
 
 /* TOkenize a string using a specified delimiter */
-char *custom_strok(char *str, const char *delim);
+char *custom_strtok(char *str, const char *delim);
 
 /* Calculate the length of a string */
 size_t custom_strlen(const char *strng);
