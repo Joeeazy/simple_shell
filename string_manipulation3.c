@@ -85,9 +85,10 @@ return (destination_pointer);
 }
 
 /**
-*atoi_alt - convert strings into characters
-*@strng: the string to be converted
-*Return: the coverted interger value
+* atoi_alt - Entry point
+* Description - 'A function that converts a character string to an integer.'
+* @strng: the string to be converted
+* Return: Converted integer value
 */
 int atoi_alt(char *strng)
 {
@@ -95,20 +96,21 @@ int result_value = 0;
 int sn = 1;
 int character_index = 0;
 
-while (strng[character_index] == ' ' || strng[character_index == '\t' ||
-strng[character_index] == '\n')
+while (strng[character_index] == ' ' || strng[character_index] == '\t' || strng[character_index] == '\n')
 {
 character_index++;
 }
+
 if (strng[character_index] == '+' || strng[character_index] == '-')
 {
 sn = (strng[character_index++] == '-') ? -1 : 1;
 }
+
 while (strng[character_index] >= '0' && strng[character_index] <= '9')
 {
-result_value = result_value * 10 + (strng[character_index] - '0'
-);
+result_value = result_value * 10 + (strng[character_index] - '0');
 character_index++;
 }
+
 return (result_value * sn);
 }

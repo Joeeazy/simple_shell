@@ -23,4 +23,5 @@ if (custom_strncmp(var_name, *env, var_name_len) == 0 &&
 return (&((*env)[var_name_len + 1]));
 }
 }
+return (NULL);
 }
