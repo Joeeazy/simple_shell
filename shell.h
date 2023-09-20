@@ -34,7 +34,10 @@ int custom_strcmp(const char *str1, const char *str2);
 char *custom_strchr(const char *strng, char c);
 
 /* Copy memory area. */
-char *custom_memcpy(char *destination_pointer, const char *source_pointer, unsigned int n);
+char *custom_memcpy(
+		char *destination_pointer,
+		const char *source_pointer,
+		unsigned int n);
 
 /* Copy a string from source to destination. */
 char *custom_strcpy(char *destination_pointer, const char *source_pointer);
@@ -51,7 +54,7 @@ char *custom_strncat(char *target, char *append, int n);
 /* Gets the length of a prefix substring. */
 size_t custom_strspn(char *strng, char *valid_characters);
 
-/* Compares two strings according to a specified number of bytes or characters. */
+/* Compares two stringsaccording toaspecifiednumber of bytes or characters. */
 int custom_strncmp(const char *str1, const char *str2, int n);
 
 /* Copies a string with a specified maximum number of bytes. */
@@ -64,7 +67,11 @@ int custom_atoi(char *str);
 char *checkCommand(const char *command);
 
 /* Print a custom error message to stderr. */
-void print_custom_error(const char *program_name, int command_count, const char *command, const char *error_description);
+void print_custom_error(
+		const char *program_name,
+		int command_count,
+		const char *command,
+		const char *error_description);
 
 /* Write a string to a specified file descriptor. */
 void write_string(int descriptor, const char *result_string);
@@ -87,7 +94,7 @@ int execute_arguments(char **tokenized_input);
 /* Reallocates memory */
 void *my_realloc(void *new_block, unsigned int old_size, size_t new_size);
 
-/* function that takes input line (a string) and returns a pointer to a character */
+/* function that takes input line and returns a pointer to a character */
 char **parse_input(char *input_line);
 
 /* Exit the shell with the specified exit status. */
@@ -102,4 +109,4 @@ extern char **environ;
 /* Global Variables and Data Structures */
 int exit_status;
 
-#endif /* SHELL_H */
+#endif /* SHELLH */
