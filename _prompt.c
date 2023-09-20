@@ -8,19 +8,19 @@
 * @arg_values: An array of command-line arguments strings.
 * Return: void
 */
-void run_shell_loop(int arg_count __attribute__((unused)), char **arg_values __attribute__((unused)))
+void run_shell_loop(int arg_count, char **arg_value)
 {
 int shell_condition = 1;
 char *input_line = NULL;
 char **tokenized_input;
 
-const char *shell_prompt = "$ ";
+/*const char *shell_prompt = "$ ";*/
 
 do {
 
-write(STDOUT_FILENO, shell_prompt, 2);
+/*write(STDOUT_FILENO, shell_prompt, 2);*/
 
-input_line = custom_read_command();
+input_line = custom_read_command(arg_count, arg_value);
 if (input_line == NULL)
 {
 free(input_line);

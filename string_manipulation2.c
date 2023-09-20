@@ -13,7 +13,7 @@ if (strng == NULL)
 {
 return (NULL);
 }
-while (strng[string_length] != '0')
+while (strng[string_length] != '\0')
 {
 string_length++;
 }

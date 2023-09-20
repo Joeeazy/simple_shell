@@ -17,7 +17,7 @@
 /* FUNCTIONS AND DECLARATIONS */
 
 /* Reads user input using getline and handles EOF condition. */
-char *custom_read_command(void);
+char *custom_read_command();
 
 /* TOkenize a string using a specified delimiter */
 char *custom_strtok(char *str, const char *delim);
@@ -77,7 +77,7 @@ void transform_string(int number, char *str);
 void free_tokens(char **token_array);
 
 /* Continuously runs the shell until Ctrl+D is pressed. */
-void run_shell_loop(int arg_count, char **arg_values);
+void run_shell_loop(int arg_count, char **arg_value);
 
 /* Executes a basic Unix command-line interpreter. */
 int main(int arg_count, char **arg_values);
